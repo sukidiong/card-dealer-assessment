@@ -1,7 +1,7 @@
 # card-dealer-assessment
 # Programming Test
 ### Theme: Playing cards will be given out to n(number) people
-2. Purpose: Total 52 cards containing 1-13 of each Spade(S), Heart(H), Diamond(D), Club(C) will be
+Purpose: Total 52 cards containing 1-13 of each Spade(S), Heart(H), Diamond(D), Club(C) will be
 given to n people randomly.
 ### Program Input : Number of people (numerical value)
 ### Output format :
