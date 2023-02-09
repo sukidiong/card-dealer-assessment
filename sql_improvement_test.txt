@@ -1,0 +1,12 @@
+The improvements I would make would be :
+1. Change LEFT JOIN to JOIN 
+Reason : Left join will return null values which serve no purpose
+2. Order by Jobs.sort_order is enough
+Reason : adding another column to ORDER BY may increase query time, sort_order is enough 
+3. Adding indexes to the foreign ID columns and WHERE columns
+4. Add Jobs.seo_keywords to the WHERE clause
+
+Assuming the search result is to find jobs that are related to type of jobs:
+5. Reduce number of WHERE clause as some of it dont make sense logically
+Reason : The following columns Jobs.location, Jobs.salary_statistic_group, Jobs.salary_range_remarks, Personalities.name, Tools.name, RecQualifications.name, ReqQualifications.name should not be storing data related to type of jobs
+6. Assuming that the above WHERE clause can be removed as the search results using those columns will not return any useful result, we can then remove the JOIN with the related tables above such as Personalities, Tool, RecQualification, ReqQualifications. 
